@@ -9,5 +9,9 @@ public class Library {
 
     private List<Book> books;
 
+    public void addNewBook(Book book) {
+        books.add(book);
+    }
+
 
 }

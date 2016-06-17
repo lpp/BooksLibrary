@@ -12,4 +12,27 @@ public class Book {
     private String ISBN;
 
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public List<Writer> getWriters() {
+        return Writers;
+    }
+
+    public void setWriters(List<Writer> writers) {
+        Writers = writers;
+    }
+
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
 }
