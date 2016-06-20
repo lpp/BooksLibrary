@@ -1,38 +1,36 @@
 package ru.lpp;
 
+import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by poul on 17.06.2016.
- */
 public class Book {
-
     private String title;
-    private List<Writer> Writers;
+    private ArrayList<Writer> writers;
     private String ISBN;
 
-
-    public String getTitle() {
-        return title;
+    Book() {
+        this.title = "";
+        this.writers = new ArrayList();
     }
 
-    public void setTitle(String title) {
+    Book(String title, ArrayList<Writer> writers) {
         this.title = title;
+        this.writers = writers;
     }
 
-    public List<Writer> getWriters() {
-        return Writers;
+    Book(String title, Writer writer) {
+        this.title = title;
+        this.writers = new ArrayList();
+        this.writers.add(writer);
     }
 
-    public void setWriters(List<Writer> writers) {
-        Writers = writers;
-    }
+    public String fullTitle() {
+        String authors = "";
 
-    public String getISBN() {
-        return ISBN;
-    }
-
-    public void setISBN(String ISBN) {
-        this.ISBN = ISBN;
+        for (Writer wr : writers ) {
+            authors = authors + wr.fullName() + " ";
+        }
+        return authors + "- " + this.title;
     }
 }
+

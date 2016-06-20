@@ -9,8 +9,8 @@ public class Writer {
     private String lastName;
 
     public Writer() {
-        firstName = "";
-        lastName = "";
+        this.firstName = "";
+        this.lastName = "";
     }
 
     public Writer(String firstName, String lastName) {
@@ -18,21 +18,9 @@ public class Writer {
         this.firstName = firstName;
     }
 
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public String fullName() {
+        String fn = this.firstName + " " + this.lastName;
+        return fn;
     }
 
 }
