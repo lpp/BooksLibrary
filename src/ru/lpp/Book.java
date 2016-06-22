@@ -1,19 +1,22 @@
 package ru.lpp;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 public class Book {
+    private UUID id;
     private String title;
     private ArrayList<Writer> writers;
     private String ISBN;
 
     Book() {
+        this.id =  UUID.randomUUID();
         this.title = "";
         this.writers = new ArrayList();
     }
 
     Book(String title, ArrayList<Writer> writers) {
+        this.id =  UUID.randomUUID();
         this.title = title;
         this.writers = writers;
     }
@@ -31,6 +34,11 @@ public class Book {
             authors = authors + wr.fullName() + " ";
         }
         return authors + "- " + this.title;
+    }
+
+
+    public UUID getId() {
+        return id;
     }
 }
 

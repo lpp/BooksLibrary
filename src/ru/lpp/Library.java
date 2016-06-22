@@ -27,14 +27,11 @@ public class Library {
     }
 
     public void showBooksList() {
-        Iterator var1 = this.books.iterator();
 
-        while(var1.hasNext()) {
-            Book book = (Book)var1.next();
-            System.out.println(book.fullTitle());
+        for (Book book:books) {
+            System.out.println( book.getId().toString() + " " + book.fullTitle() );
         }
 
     }
-
 
 }

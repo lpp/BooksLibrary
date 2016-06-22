@@ -17,6 +17,6 @@ public class Main {
         lib.addNewBook(bk2);
         lib.addNewBook(bk3);
         lib.showBooksList();
-        System.out.println("Размер бибилиотека " + lib.size());
+        System.out.println("Размер библиотеки " + lib.size());
     }
 }
