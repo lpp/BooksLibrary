@@ -22,6 +22,7 @@ public class Book {
     }
 
     Book(String title, Writer writer) {
+        this.id =  UUID.randomUUID();
         this.title = title;
         this.writers = new ArrayList();
         this.writers.add(writer);

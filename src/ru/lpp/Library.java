@@ -29,9 +29,30 @@ public class Library {
     public void showBooksList() {
 
         for (Book book:books) {
-            System.out.println( book.getId().toString() + " " + book.fullTitle() );
+            try {
+                System.out.println(book.getId().toString() + " " + book.fullTitle());
+            } catch (NullPointerException ex) {
+                //System.out.println(book.fullTitle());
+            }
         }
 
     }
+
+    Library SearchByTitle(String title ){
+
+        Library libResult  = new Library();
+        for (Book book:books) {
+            try {
+                if (book.fullTitle().contains(title)) {
+                    libResult.addNewBook(book);
+                }
+            } catch (NullPointerException ex) {
+                throw ex;
+            }
+        }
+        return libResult;
+    };
+
+
 
 }
